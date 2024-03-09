@@ -2,7 +2,7 @@
 This project focuses on implementing compression and decompression algorithms for DNA strings using bitwise operators in the C programming language. The program accepts DNA strings via command line arguments and performs compression or decompression operations based on the provided flags.
 
 ## Design Overview
-The program is structured into multiple files, including `compress.c`, `compress.h`, `decompress.c`, `decompress.h`, and `proj1.c`. Each file serves a specific purpose in the implementation of compression and decompression functionalities using bitwise operators. The `Makefile` is provided to compile the program efficiently.
+The program is structured into multiple files, including `compress.c`, `compress.h`, `decompress.c`, `decompress.h`, and `dna_processor.c`. Each file serves a specific purpose in the implementation of compression and decompression functionalities using bitwise operators. The `Makefile` is provided to compile the program efficiently.
 
 ## Functionality
 `compress.c`:
@@ -18,6 +18,11 @@ The program is structured into multiple files, including `compress.c`, `compress
 - Ensures that decompressed DNA strings match the original input DNA strings.
 - Employs at least three different bitwise operators for decompression.
 
+`dna_processor.c`:
+- Contains the main function that processes command line arguments and passes them to appropriate functions implemented in `compress.c` or `decompress.c`.
+- The main function is the only function in this file and cannot do more than processing command line arguments and passing them to other functions.
+- Accepts DNA strings via command line arguments and performs compression or decompression operations based on provided flags.
+
 ## File Structure and Content
 ```
 dna-compression/
@@ -26,6 +31,6 @@ dna-compression/
 ├── decompress.c
 ├── decompress.h
 ├── Makefile
-├── proj1.c
+├── dna_processor.c
 └── README.md
 ```
