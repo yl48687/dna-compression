@@ -1,22 +1,30 @@
 # DNA Compression
-
-This project revolves around the development of a C program tailored to perform lossless text compression and decompression, specifically designed for DNA strings. The core functionality of the program hinges on the utilization of bitwise operators to encode DNA characters into binary representations, thus achieving compression without compromising data integrity. Here's an overview of the program's design and functionality:
+This project focuses on implementing compression and decompression algorithms for DNA strings using bitwise operators in the C programming language. The program accepts DNA strings via command line arguments and performs compression or decompression operations based on the provided flags.
 
 ## Design Overview
-The program is structured to offer a command line interface, enabling users to interact with it conveniently. It employs modular design principles, organizing the codebase into multiple files, each responsible for a specific aspect of the compression and decompression process. By adopting this approach, the program ensures better code organization, scalability, and maintainability.
+The program is structured into multiple files, including `compress.c`, `compress.h`, `decompress.c`, `decompress.h`, and `proj1.c`. Each file serves a specific purpose in the implementation of compression and decompression functionalities using bitwise operators. The `Makefile` is provided to compile the program efficiently.
 
 ## Functionality
-The program includes functions dedicated to compressing DNA strings using bitwise operators. These functions convert DNA characters (A, T, C, G) into their binary equivalents, effectively reducing the storage space required to store the DNA sequences.
+`compress.c`:
+- Implements compression of DNA strings using bitwise operators.
+- Uses binary encoding for characters in DNA strings (A, T, C, G).
+- Employs at least three different bitwise operators for compression.
+- Ensures lossless compression, preserving all characters in the original DNA string.
+- Calculates the number of bytes saved during compression for each input DNA string.
 
-In tandem with compression, the program features functions for decompressing previously compressed DNA strings. These functions reverse the compression process, reconstructing the original DNA sequences from their binary representations, thereby ensuring no loss of information.
+`decompress.c`:
+- Implements decompression of compressed DNA strings using bitwise operators.
+- Reconstructs the original DNA string from the compressed binary representation.
+- Ensures that decompressed DNA strings match the original input DNA strings.
+- Employs at least three different bitwise operators for decompression.
 
 ## File Structure and Content
-- **compress.c**: contains implementations of functions responsible for compressing DNA strings. It utilizes bitwise operators to convert DNA characters into binary representations, facilitating efficient compression. Additionally, any auxiliary functions required for compression are defined within this file.
-
-- **compress.h**: provides function prototypes for the compression functionalities defined in compress.c. It serves as a blueprint for the functions implemented in **compress.c**, ensuring proper organization and separation of concerns.
-
-- **decompress.c**: contains implementations of functions for decompressing previously compressed DNA strings. These functions reverse the compression process, reconstructing the original DNA sequences from their binary representations using bitwise operators. Similar to **compress.c**, any auxiliary functions necessary for decompression are defined within this file.
-
-- **decompress.h**: declares function prototypes for the decompression functionalities implemented in **decompress.c**. It ensures consistency and clarity in function declarations across different parts of the program.
-
-- **proj1.c**: houses the main function responsible for orchestrating the program's execution. It processes command line arguments, directs the flow of execution, and invokes the appropriate compression or decompression functions based on user input. This file strictly adheres to a concise and focused implementation approach.
+```
+dna-compression/
+├── compress.c
+├── compress.h
+├── decompress.c
+├── decompress.h
+├── Makefile
+└── proj1.c
+```
