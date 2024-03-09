@@ -30,7 +30,7 @@ dna-compression/
 ├── compress.h
 ├── decompress.c
 ├── decompress.h
-├── Makefile
 ├── dna_processor.c
+├── Makefile
 └── README.md
 ```
