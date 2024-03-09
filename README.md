@@ -26,5 +26,6 @@ dna-compression/
 ├── decompress.c
 ├── decompress.h
 ├── Makefile
-└── proj1.c
+├── proj1.c
+└── README.md
 ```
